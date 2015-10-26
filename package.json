@@ -4,9 +4,11 @@
   "private": true,
   "author": "Kenneth Powers <ken@kenpowers.net>",
   "description": "Bot for ExcelWorship Slack Group",
+  "license": "MIT",
   "scripts": {
     "start:shell": "hubot --name hubot",
-    "start": "npm run start:shell -- -a slack"
+    "start": "npm run start:shell -- -a slack",
+    "forever": "forever start -c \"npm start\" ."
   },
   "dependencies": {
     "hubot": "^2.16.0",
@@ -18,5 +20,7 @@
     "hubot-slack": "^3.4.1",
     "request-promise": "^1.0.2"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "forever": "^0.15.1"
+  }
 }
