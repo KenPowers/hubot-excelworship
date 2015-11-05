@@ -8,7 +8,7 @@
   "scripts": {
     "start:shell": "hubot --name hubot",
     "start": "npm run start:shell -- -a slack",
-    "forever": "forever start -c \"npm start\" ."
+    "forever": "forever start -l bot.forever.log -o bot.out.log -e bot.err.log -a -c \"npm start\" ."
   },
   "dependencies": {
     "hubot": "^2.16.0",
